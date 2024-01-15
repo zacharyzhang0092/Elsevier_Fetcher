@@ -1,7 +1,6 @@
 requests
 bs4
 pandas
-argparse
 json
 streamlit
 elsevier
