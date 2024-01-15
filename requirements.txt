@@ -1,7 +1,6 @@
 requests
 bs4
 pandas
-json
 streamlit
 st_aggrid
 textwrap
