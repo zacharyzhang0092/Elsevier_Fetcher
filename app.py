@@ -9,7 +9,7 @@ import json
 import argparse
 
 
-from elsevier_fetch import ElsevierFetcher
+from elsevier_fetch.elsevier_fetch import ElsevierFetcher
 
 
 
