@@ -82,7 +82,7 @@ def app():
         def click_button():
             st.session_state.clicked = True
 
-        st.button('获取期刊',on_click=click_button,label="获取期刊", label_visibility="off")
+        st.button('获取期刊',on_click=click_button)
 
         Elsevier_Data = {'1':['landscape-and-urban-planning','cities','urban-forestry-and-urban-greening','computers-environment-and-urban-systems'],
                          '2':['building-and-environment','sustainable-cities-and-society','urban-climate','remote-sensing-of-environment']}
@@ -105,7 +105,7 @@ def app():
     st.markdown("<p style='font-size: 28px; font-weight: bold;'>请输入要爬取的卷号：</p>", unsafe_allow_html=True)
     volume = st.text_input(' ')
 
-    if st.button('获取文章',label="获取文章", label_visibility="off"):
+    if st.button('获取文章'):
         df,df2 = journal_fetcher.fetch_articles(volume)
 
         #AgGrid修饰表格显示
