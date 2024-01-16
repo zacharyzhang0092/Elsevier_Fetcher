@@ -92,12 +92,14 @@ def app():
         col3, col4 = st.columns(2)
         with col3:
             st.markdown(f"<p style='font-size: 28px; font-weight: bold;'>《{journal}》all issues</p>", unsafe_allow_html=True)
+            img = None 
             if st.session_state.clicked:
                 df ,img = journal_fetcher.fetch_journal()
                 df= df[3:]
                 st.markdown("<p style='font-size: 18px; font-weight: bold;'>{}</p>".format('<br>'.join(df)), unsafe_allow_html=True)
         with col4:
-            st.image(img, use_column_width=True)
+            if img is not None:
+                st.image(img, use_column_width=True)
 
     # 创建一个输入框，用于输入卷号
     st.markdown("<p style='font-size: 28px; font-weight: bold;'>请输入要爬取的卷号：</p>", unsafe_allow_html=True)
