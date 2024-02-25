@@ -1,5 +1,5 @@
 requests
-Beautifulsoup4
 pandas
 streamlit
 streamlit-aggrid
+requests_html
